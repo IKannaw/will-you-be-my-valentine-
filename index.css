@@ -16,9 +16,24 @@
                     width: 90%;
                     max-width: 400px;
                 }
-
 h1 {
     color: #e91e63;
+    font-size: 30px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
   .buttons {
@@ -40,6 +55,18 @@ h1 {
       background-color: #e91e63;
       color: white;
   }
+.message {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #f86496;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
   #noBtn {
       background-color: #f44336;
@@ -51,6 +78,9 @@ h1 {
           width: 95%;
           padding: 15px;
       }
+           .message {
+               font-size: 16px;
+           }
 
       h1 {
           font-size: 20px;
@@ -97,5 +127,96 @@ h1 {
 
     50% {
         transform: translateY(-20px);
+    }
+}
+
+/* Existing styles... */
+
+/* Dialog Box */
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.dialog p {
+    font-size: 24px;
+    color: #e91e63;
+}
+
+.dialog button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Falling Balls */
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e91e63;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.dialog p {
+    font-size: 24px;
+    color: #e91e63;
+}
+
+.dialog button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Falling Balls */
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e91e63;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -20px;
+    }
+
+    100% {
+        top: 100vh;
     }
 }
