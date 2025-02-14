@@ -2,7 +2,7 @@
 document.getElementById('yesBtn').addEventListener('click', function() {
     const dialog = document.getElementById('dialog');
     dialog.style.display = 'block';
-
+    document.getElementById('noBtn').style.display = "none";
     // Create falling balls
     createFallingBalls();
 });
